@@ -1,4 +1,5 @@
 " vimrc
+" forked from
 " Saleem Abdulrasool <compnerd@compnerd.org>
 " vim: set ts=8 sts=2 sw=2 et nowrap:
 
@@ -340,3 +341,15 @@ if filereadable(s:per_host_configuration)
   execute ":source " . s:per_host_configuration
 endif
 
+"
+" my contributions
+"
+
+nunmap <silent> <space>
+
+nmap <F11> :set wrap!<CR>
+imap <F11> <C-0>:set nowrap!<CR>
+
+noremap <TAP> <C-W>w
+
+set number

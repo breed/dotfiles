@@ -224,20 +224,6 @@ vmap K k
 nmap K K<CR>
 
 " ---- shortcuts ----
-function! s:CLangShortcuts()
-  inoremap #in #include
-  if stridx(&ft, "objc", 0) == 0
-    inoremap #im #import
-  endif
-
-  inoremap #d #define
-  inoremap #els #else
-  inoremap #eli #elif
-  inoremap #en #endif
-  inoremap #p #pragma
-  inoremap #u #undef
-endfunction
-
 if has("autocmd")
   execute "autocmd FileType " . join(s:CLangFileTypes, ",") . " call s:CLangShortcuts()"
 endif
@@ -351,5 +337,8 @@ nmap <F11> :set wrap!<CR>
 imap <F11> <C-0>:set nowrap!<CR>
 
 noremap <TAP> <C-W>w
+
+" Nul is c-space... go figure...
+imap <Nul> <C-n>
 
 set number

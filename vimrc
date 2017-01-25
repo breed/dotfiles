@@ -225,10 +225,6 @@ nmap K K<CR>
 
 " ---- shortcuts ----
 if has("autocmd")
-  execute "autocmd FileType " . join(s:CLangFileTypes, ",") . " call s:CLangShortcuts()"
-endif
-
-if has("autocmd")
   execute "autocmd FileType " . join(s:CPlusPlusFileTypes, ",") . " set matchpairs=(:),{:},[:],<:>"
 endif
 
